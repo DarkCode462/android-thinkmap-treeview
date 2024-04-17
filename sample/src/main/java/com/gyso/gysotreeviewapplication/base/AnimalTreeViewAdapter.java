@@ -23,11 +23,10 @@ import com.gyso.treeview.model.NodeModel;
  * @Time: 2021/4/23  16:48
  * @Email: 674149099@qq.com
  * @WeChat: guaishouN
- * @Describe:
- * Tree View Adapter for node data to view
+ * @Describe: Tree View Adapter for node data to view
  */
 public class AnimalTreeViewAdapter extends TreeViewAdapter<Animal> {
-    private DashLine dashLine =  new DashLine(Color.parseColor("#F06292"),6);
+    private DashLine dashLine = new DashLine(Color.parseColor("#F06292"), 6);
     private OnItemClickListener listener;
 
     public void setOnItemListener(OnItemClickListener listener) {
@@ -36,8 +35,8 @@ public class AnimalTreeViewAdapter extends TreeViewAdapter<Animal> {
 
     @Override
     public TreeViewHolder<Animal> onCreateViewHolder(@NonNull ViewGroup viewGroup, NodeModel<Animal> node) {
-        NodeBaseLayoutBinding nodeBinding = NodeBaseLayoutBinding.inflate(LayoutInflater.from(viewGroup.getContext()),viewGroup,false);
-        return new TreeViewHolder<>(nodeBinding.getRoot(),node);
+        NodeBaseLayoutBinding nodeBinding = NodeBaseLayoutBinding.inflate(LayoutInflater.from(viewGroup.getContext()), viewGroup, false);
+        return new TreeViewHolder<>(nodeBinding.getRoot(), node);
     }
 
     @Override
@@ -51,8 +50,8 @@ public class AnimalTreeViewAdapter extends TreeViewAdapter<Animal> {
         nameView.setText(animal.name);
         headView.setImageResource(animal.headId);
         headView.setOnClickListener(v -> {
-            if(listener!=null){
-                listener.onItemClick(v,node);
+            if (listener != null) {
+                listener.onItemClick(v, node);
             }
         });
     }
@@ -72,7 +71,7 @@ public class AnimalTreeViewAdapter extends TreeViewAdapter<Animal> {
         return null;
     }
 
-    public interface OnItemClickListener{
+    public interface OnItemClickListener {
         void onItemClick(View item, NodeModel<Animal> node);
     }
 }

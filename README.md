@@ -5,7 +5,10 @@
 
 ⭐⭐⭐⭐⭐Tree View; Mind map; Think map; tree map; 树状图；思维导图；组织机构图；层次图；树型图
 
-A custom tree view for Android,  designed for easy drawing some tree nodes (e.g. thind mind and tree nodes). Includes smoothly zoom, move, limit and center fix animation support, and allows easy extension so you can add your own child node's customs view and touch event detection.
+A custom tree view for Android, designed for easy drawing some tree nodes (e.g. thind mind and tree
+nodes). Includes smoothly zoom, move, limit and center fix animation support, and allows easy
+extension so you can add your own child node's customs view and touch event detection.
+
 ```groovy
     dependencies {
 //请直接使用lib中的代码，1.0.0这个引用库很久没有更新了
@@ -54,7 +57,6 @@ A custom tree view for Android,  designed for easy drawing some tree nodes (e.g.
 
 #### Steps for use
 
- 
 ```xml
     <com.gyso.treeview.GysoTreeView
         android:id="@+id/base_tree_view"
@@ -73,12 +75,9 @@ public class Animal {
 }
 ```
 
-
 To use a tree view, you should do **5 steps** as follows:
 
-
-
-1. Customs adapter by extends  TreeViewAdapter.
+1. Customs adapter by extends TreeViewAdapter.
 
    ```java
    public class AnimalTreeViewAdapter extends TreeViewAdapter<Animal> {
@@ -109,8 +108,9 @@ To use a tree view, you should do **5 steps** as follows:
        }
    }
    ```
-   
-2. configure layout manager. Space unit is dp. You can custom you line by extends {@link com.gyso.treeview.line.BaseLine}
+
+2. configure layout manager. Space unit is dp. You can custom you line by extends {@link
+   com.gyso.treeview.line.BaseLine}
 
    ```java
    int space_50dp = 50;
@@ -128,7 +128,7 @@ To use a tree view, you should do **5 steps** as follows:
     // new BoxVerticalUpAndDownLayoutManager(this,space_50dp,space_20dp,line);
    ```
 
-3. setting adapter and  layout manager for your tree view.
+3. setting adapter and layout manager for your tree view.
 
    ```java
    ...
@@ -162,7 +162,7 @@ To use a tree view, you should do **5 steps** as follows:
    //finally set this treeModel to the adapter
    adapter.setTreeModel(treeModel);
    ```
-   
+
 5. If your want to edit your tree view, please use an editor.
 
 ```java
@@ -184,15 +184,16 @@ editor.focusMidLocation()
 editor.requestMoveNodeByDragging(isChecked);
 ```
 
-
-
-
 #### Notes & limitations
 
-Firstly, only vertical-down derection layout and right direction layout is available, more layout style should be code.
+Firstly, only vertical-down derection layout and right direction layout is available, more layout
+style should be code.
 
-Secondly, customing lines by extends BaseLine may be a little complicate for Android beginner, and performance issues will happen if you using carefully.
+Secondly, customing lines by extends BaseLine may be a little complicate for Android beginner, and
+performance issues will happen if you using carefully.
 
-Finally, this custom view will be continuely improved,  if you has some innovative ideas, please tell me. Thanks for you patience.
+Finally, this custom view will be continuely improved, if you has some innovative ideas, please tell
+me. Thanks for you patience.
 
-I will tell you how it works on [my CSDN blogs](https://blog.csdn.net/guaisou/article/details/116611140).Thx.
+I will tell you how it works
+on [my CSDN blogs](https://blog.csdn.net/guaisou/article/details/116611140).Thx.

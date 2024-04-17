@@ -4,7 +4,8 @@
 
 Tree View; Mind map; Think map; tree map; 树状图；思维导图；
 
-目前没发现比较好的Android树状图开源控件，于是决定自己写一个开源控件，对比了一下市面上关于思维导图或者树状图显示（如xMind，mind master等）的app，本文开源框架并不逊色。
+目前没发现比较好的Android树状图开源控件，于是决定自己写一个开源控件，对比了一下市面上关于思维导图或者树状图显示（如xMind，mind
+master等）的app，本文开源框架并不逊色。
 
 ### 特点
 
@@ -23,8 +24,6 @@ Tree View; Mind map; Think map; tree map; 树状图；思维导图；
 - 支持拖动调整节点关系
 
 - 增删、移动结构添加动画效果
-
-  
 
 [github控件连接](https://github.com/guaishouN/android-tree-view.git)
 
@@ -56,7 +55,8 @@ Tree View; Mind map; Think map; tree map; 树状图；思维导图；
 
 #### 使用步骤：
 
- 添加依赖
+添加依赖
+
  ```groovy
  dependencies {
 	//请直接使用lib中的代码，1.0.0这个引用库很久没有更新了
@@ -73,6 +73,7 @@ Tree View; Mind map; Think map; tree map; 树状图；思维导图；
     android:background="@color/colorBackground">
 </com.gyso.treeview.GysoTreeView>
 ```
+
 下面说明中Animal类是仅仅用于举例的bean
 
 ```java
@@ -116,7 +117,8 @@ public class AnimalTreeViewAdapter extends TreeViewAdapter<Animal> {
 }
 ```
 
-2 配置LayoutManager。主要设置布局风格（向右展开或垂直向下展开）、父节点与子节点的间隙、子节点间的间隙、节点间的连线（已经实现了直线、光滑曲线、虚线、根状线，也可通过BaseLine实现你自己的连线）
+2
+配置LayoutManager。主要设置布局风格（向右展开或垂直向下展开）、父节点与子节点的间隙、子节点间的间隙、节点间的连线（已经实现了直线、光滑曲线、虚线、根状线，也可通过BaseLine实现你自己的连线）
 
 ```java
 int space_50dp = 50;
@@ -192,11 +194,10 @@ editor.focusMidLocation()
 editor.requestMoveNodeByDragging(isChecked);
 ```
 
-
-
 #### 写在最后
 
-目前只写了垂直向下布局及向右展开布局，其他的还得花时间。对于线的实现只是实现了几种，也还得丰富。在自定义自己的BaseLine线时，Android初学者注意因为画线动作是在View的onDraw(canvas)中的，所以在里面不要new对象，不要任何耗时操作。
+目前只写了垂直向下布局及向右展开布局，其他的还得花时间。对于线的实现只是实现了几种，也还得丰富。在自定义自己的BaseLine线时，Android初学者注意因为画线动作是在View的onDraw(
+canvas)中的，所以在里面不要new对象，不要任何耗时操作。
 
 这个项目如果有人用就会持续更新下去。喜欢点个赞，谢谢。
 

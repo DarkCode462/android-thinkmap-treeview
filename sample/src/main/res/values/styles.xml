@@ -6,6 +6,7 @@
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
     </style>
+
     <style name="ToggleStyle">
         <item name="android:paddingEnd">4dp</item>
         <item name="android:textSize">14sp</item>
