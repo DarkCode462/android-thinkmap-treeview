@@ -50,7 +50,7 @@ import java.util.Map;
 
 public class TreeViewContainer extends ViewGroup implements TreeViewNotifier {
     private static final String TAG = TreeViewContainer.class.getSimpleName();
-    private static final boolean isDebug = BuildConfig.isDebug;
+    private static final boolean isDebug = false;
     public static final Object IS_EDIT_DRAGGING = new Object();
     public static final double DRAG_HIT_SLOP = 60;
     public static final float Z_NOR = 10f;
